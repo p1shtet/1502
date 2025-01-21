@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const newTemp302 = adjustTemperature(parseFloat(temp302Element.textContent.trim()), true, newTemp203, newTemp202, 'temp302');
 
 
-        temp203Element.textContent = `${newTemp203}°C`;
-        temp202Element.textContent = `${newTemp202}°C`;
-        temp302Element.textContent = `${newTemp302}°C`;
+        temp203Element.textContent = `${newTemp203}Â°C`;
+        temp202Element.textContent = `${newTemp202}Â°C`;
+        temp302Element.textContent = `${newTemp302}Â°C`;
 
 
         applyAnimation(temp203Element);
@@ -100,22 +100,22 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
           canUpdate = true;
           refreshButton.disabled = false;
-          refreshButton.textContent = "Îáíîâèòü";
+          refreshButton.textContent = "ÐžÐ±Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ"; // Ð—Ð°Ð¼ÐµÐ½ÐµÐ½Ð¾
         }, UPDATE_INTERVAL);
 
-         refreshButton.textContent = "Îáíîâëåíèå...";
+         refreshButton.textContent = "ÐžÐ±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ..."; // Ð—Ð°Ð¼ÐµÐ½ÐµÐ½Ð¾
     }
 
 
-     // Óñòàíàâëèâàåì íà÷àëüíóþ òåìïåðàòóðó ïðè çàãðóçêå ñòðàíèöû
-    temp203Element.textContent = `${generateInitialTemperature(MIN_TEMP_203_202, MAX_TEMP_203_202)}°C`;
-    temp202Element.textContent = `${generateInitialTemperature(MIN_TEMP_203_202, MAX_TEMP_203_202)}°C`;
-    temp302Element.textContent = `${generateInitialTemperature(MIN_TEMP_302, MAX_TEMP_302)}°C`;
+     // Ð£ÑÑ‚Ð°Ð½Ð°Ð²Ð»Ð¸Ð²Ð°ÐµÐ¼ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½ÑƒÑŽ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ñƒ Ð¿Ñ€Ð¸ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐµ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹
+    temp203Element.textContent = `${generateInitialTemperature(MIN_TEMP_203_202, MAX_TEMP_203_202)}Â°C`;
+    temp202Element.textContent = `${generateInitialTemperature(MIN_TEMP_203_202, MAX_TEMP_203_202)}Â°C`;
+    temp302Element.textContent = `${generateInitialTemperature(MIN_TEMP_302, MAX_TEMP_302)}Â°C`;
 
-    // Èçíà÷àëüíî ðàçðåøàåì îáíîâëåíèå
+    // Ð˜Ð·Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð¾ Ñ€Ð°Ð·Ñ€ÐµÑˆÐ°ÐµÐ¼ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ
     canUpdate = true;
 
-    // Óñòàíàâëèâàåì íà÷àëüíóþ áëîêèðîâêó íà 15 ñåêóíä
+    // Ð£ÑÑ‚Ð°Ð½Ð°Ð²Ð»Ð¸Ð²Ð°ÐµÐ¼ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½ÑƒÑŽ Ð±Ð»Ð¾ÐºÐ¸Ñ€Ð¾Ð²ÐºÑƒ Ð½Ð° 15 ÑÐµÐºÑƒÐ½Ð´
      refreshButton.disabled = true;
     setTimeout(() => {
         refreshButton.disabled = false;
